@@ -20,3 +20,5 @@ def insertAtTail(head, val):
     curr.next = newNode
     newNode.prev = curr
     return head
+
+# INSERTION AT THE GIVEN INDEX

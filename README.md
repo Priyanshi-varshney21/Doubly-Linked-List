@@ -21,4 +21,14 @@ def insertAtTail(head, val):
     newNode.prev = curr
     return head
 
-# INSERTION AT THE GIVEN INDEX
+# DELETE AT THE BEGINNING
+def deleteathead(head):
+  if head is None:
+    return 
+  newHead=head.next
+  if newHead:
+    newHead.prev=None
+  head.next=None
+
+  return newHead
+

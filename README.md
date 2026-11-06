@@ -32,3 +32,16 @@ def deleteathead(head):
 
   return newHead
 
+# DELETE THE TAIL NODE
+def deleteAtTail (self, head):
+  if head is None:
+    return 
+  if head.next is None:
+    return
+  curr=head
+  while curr.next is not None:
+    curr=curr.next
+  curr.prev.next=None
+  curr.prev = None
+  return head
+  

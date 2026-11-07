@@ -68,3 +68,15 @@ def deleteGivenNode(self, node: ListNode) -> None:
             node.next.prev=node.prev
         node.prev=None   #To completely disconnect the nodes
         node.next=None
+
+# REVERSE A DLL
+def reverseDLL(self, head):
+        if head is None:
+            return 
+        curr=head
+        while curr:
+            curr.prev,curr.next=curr.next,curr.prev
+            head=curr
+            curr=curr.prev
+        return head
+

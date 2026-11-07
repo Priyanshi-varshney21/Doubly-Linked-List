@@ -57,3 +57,14 @@ def deleteAtTail (self, head):
             newNode.prev=prev
             prev=newNode
         return head
+
+# REMOVING GIVEN NODE IN A DOUBLY LL
+def deleteGivenNode(self, node: ListNode) -> None:
+        if node is None:
+            return
+        if node.prev:   #Remove forward connection
+            node.prev.next=node.next
+        if node.next:   #Remove backward connection
+            node.next.prev=node.prev
+        node.prev=None   #To completely disconnect the nodes
+        node.next=None

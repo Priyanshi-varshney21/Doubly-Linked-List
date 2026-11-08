@@ -80,3 +80,17 @@ def reverseDLL(self, head):
             curr=curr.prev
         return head
 
+# DELETE Kth element
+def deleteKthElement(head, k):
+    if head is None:
+        return None
+    if k == 1:
+        return head.next
+    curr = head
+    for i in range(1, k - 1):
+        curr = curr.next
+        if curr is None:
+            return head
+    if curr.next:
+        curr.next = curr.next.next
+    return head

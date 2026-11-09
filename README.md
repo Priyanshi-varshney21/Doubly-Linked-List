@@ -111,3 +111,15 @@ def deleteKthElement(head, k):
             head=newNode
         curr.prev=newNode
         return head
+
+# INSERT BEFORE GIVEN NODE
+def insertBeforeGivenNode(self, node: ListNode, X: int) -> None:
+        if node is None:
+            return 
+        newnode=ListNode(X)
+        newnode.prev=node.prev
+        newnode.next=node
+        if node.prev:
+            node.prev.next=newnode
+        node.prev=newnode
+        

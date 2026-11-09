@@ -94,3 +94,20 @@ def deleteKthElement(head, k):
     if curr.next:
         curr.next = curr.next.next
     return head
+
+# INSERT A NODE BEFORE TAIL
+ def insertBeforeTail(self, head: ListNode, X: int) -> ListNode:
+        newNode=ListNode(X)
+        if head is None:
+            return 
+        curr=head
+        while curr.next is not None:
+            curr=curr.next
+        newNode.prev=curr.prev
+        newNode.next=curr
+        if curr.prev:
+            curr.prev.next=newNode    #Establishing forward connection 
+        else: 
+            head=newNode
+        curr.prev=newNode
+        return head

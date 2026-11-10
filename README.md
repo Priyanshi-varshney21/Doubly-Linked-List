@@ -122,4 +122,19 @@ def insertBeforeGivenNode(self, node: ListNode, X: int) -> None:
         if node.prev:
             node.prev.next=newnode
         node.prev=newnode
-        
+
+
+# SEGGERATE ODD EVEN NODES IN A LINKEDLIST
+if head is None and head.next is None:
+            return head
+        odd=head
+        even=head.next
+        evenhead=even
+        while even and even.next:
+            odd.next=even.next
+            odd=odd.next
+            even.next=odd.next
+            even=even.next
+        odd.next=evenhead
+        return head
+

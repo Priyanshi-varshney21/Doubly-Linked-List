@@ -138,3 +138,13 @@ if head is None and head.next is None:
         odd.next=evenhead
         return head
 
+# REVERSE A SINGLY LINKED LIST
+def reverseList(self, head):
+    prev = None
+    curr = head
+    while curr:
+        front = curr.next
+        curr.next = prev
+        prev = curr
+        curr = front
+    return prev

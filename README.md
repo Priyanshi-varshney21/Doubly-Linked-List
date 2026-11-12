@@ -140,11 +140,11 @@ if head is None and head.next is None:
 
 # REVERSE A SINGLY LINKED LIST
 def reverseList(self, head):
-    prev = None
-    curr = head
-    while curr:
-        front = curr.next
-        curr.next = prev
-        prev = curr
-        curr = front
-    return prev
+        prev=None
+        curr=head
+        while curr:
+            next=curr.next
+            curr.next=prev
+            prev=curr
+            curr=next
+        return prev

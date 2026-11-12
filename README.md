@@ -163,3 +163,31 @@ def removeNthFromEnd(self, head, n):
             curr=curr.next
         curr.next=curr.next.next
         return head
+
+# SORT THE LINKED LIST IN 0'S 1'S and 2'S
+def sortList(self, head):
+        count0=count1=count2=0
+        curr=head
+        while curr:
+            if curr.data==0:
+                count0+=1
+            elif curr.data==1:
+                count1+=1
+            else:
+                count2+=1
+            curr=curr.next
+        curr=head
+        while count0>0:
+            curr.data=0
+            count0-=1
+            curr=curr.next
+        while count1>0:
+            curr.data=1
+            count1-=1
+            curr=curr.next
+        while count2>0:
+            curr.data=2
+            count2-=1
+            curr=curr.next
+        return head
+        
